@@ -1,16 +1,12 @@
+include _head.pug
+
 - var data = { header: 'Статьи', items: [{ title: 'Таблица размеров детских колгот', text: 'В этой статье мы опишем как правильно снять размеры для правильного подбора детских колгот', img:'images/1.jpg', date: new Date() },{ title: 'Актуальные вопросы: можно ли постирать коляску и как правильно это сделать', text: '', img:'', date: '28 Августа, 12:19' }, { title: 'Полезно или вредно? Какие игрушки стоит выбирать?', text: '', img:'', date: '28 Августа, 12:19' }, { title: 'Лучшие игрушки и игры для развития моторики', text: '', img:'', date: '28 Августа, 12:19'}, { title: 'Подарок имениннику на 9 лет', text: 'В этой статье мы опишем как правильно снять размеры для правильного подбора детских колгот', img:'images/2.jpg', date: '28 Августа, 12:19' }, { title: 'Рейтинг самых популярных игрушек 2017 года', text: '', img:'', date: '28 Августа, 12:19'}] }
 
 
 
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="x-ua-compatible", content="ie=edge")
-        meta(name="description", content="")
-        meta(name="viewport", content="width=device-width, initial-scale=1")
-        title Title
-        link(href="css/main.css", rel="stylesheet")
+    +head("Статьи")
     body
         .container
             h1.article-heading #{data.header}
