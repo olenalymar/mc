@@ -13,10 +13,12 @@ html(lang="en")
             .row
                 mixin data-item(item)
                     article
-                        img(src=item.img)
+                        if item.img
+                            img(src=item.img)
                         h2.article-item-heading
                             a(href="#")=item.title
-                        p=item.text
+                        if item.text    
+                            p=item.text
                         p.date=item.date
 
                 for item in data.items
